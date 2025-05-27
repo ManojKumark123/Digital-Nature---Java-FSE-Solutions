@@ -1,0 +1,33 @@
+HTML:
+<nav class="responsive-nav">
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+</nav>
+<img src="event.jpg" class="responsive-img" alt="Event">
+CSS:
+.responsive-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.responsive-img {
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .responsive-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responsive-img {
+        width: 100%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}

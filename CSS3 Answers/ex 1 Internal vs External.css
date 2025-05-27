@@ -1,0 +1,41 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Inclusion Example</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 style="color: red;">This heading is red using inline style</h1>
+    <p class="highlight">Reusable styles are in styles.css</p>
+
+</body>
+</html>
+
+CSS:
+/* Style for the call-to-action button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

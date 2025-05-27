@@ -1,0 +1,22 @@
+HTML:
+<section>
+    <h2 class="gradient-header">City Council Announcements</h2>
+</section>
+CSS:
+body {
+    background: #f5f5f5 url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* RGBA text color */
+p {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Gradient header */
+.gradient-header {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    padding: 10px;
+}
+

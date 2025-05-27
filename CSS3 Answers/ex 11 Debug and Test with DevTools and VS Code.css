@@ -1,0 +1,111 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevTools Debug Example</title>
+    <!-- External CSS (Intentionally with typo for debugging practice) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Welcome to the Community Portal</h1>
+        <p class="tagline">Your hub for local events and announcements</p>
+    </header>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h2>Featured Event</h2>
+        <p>Join us for the Annual Community Picnic this Sunday at Central Park!</p>
+        <img src="picnic.jpg" alt="Community Picnic" class="event-image">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Local City Council</p>
+    </footer>
+
+    <script>
+        console.log("JavaScript loaded.");
+        // Intentional error for Console debug
+        // console.log(undefinedVariable);
+    </script>
+</body>
+</html>
+
+CSS:
+/* ===== Main Header Styling ===== */
+.main-header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== Navigation Styling ===== */
+.top-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.top-nav ul li {
+    margin: 0 15px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #003366;
+}
+
+/* ===== Content Section ===== */
+.content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive image */
+.event-image {
+    width: 80%;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-header h1 {
+        font-size: 20px;
+    }
+
+    .event-image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+<select id="eventType" onchange="savePref()">
+    <option value="">Choose Event</option>
+    <option value="sports">Sports</option>
+    <option value="education">Education</option>
+</select>
+<button onclick="clearPrefs()">Clear Preferences</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const saved = localStorage.getItem("preferredType");
+        if (saved) document.getElementById("eventType").value = saved;
+    });
+
+    function savePref() {
+        const type = document.getElementById("eventType").value;
+        localStorage.setItem("preferredType", type);
+        sessionStorage.setItem("lastVisit", new Date());
+    }
+
+    function clearPrefs() {
+        localStorage.clear();
+        sessionStorage.clear();
+        alert("Preferences cleared!");
+    }
+</script>

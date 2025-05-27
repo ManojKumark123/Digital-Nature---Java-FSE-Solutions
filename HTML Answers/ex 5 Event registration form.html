@@ -1,0 +1,25 @@
+<style>
+    form { width: 300px; background: #f0f0f0; padding: 10px; }
+</style>
+
+<form onsubmit="confirmMsg(event)">
+    <label>Name: <input type="text" name="name" placeholder="John Doe" required autofocus></label><br>
+    <label>Email: <input type="email" name="email" placeholder="john@example.com" required></label><br>
+    <label>Date: <input type="date" name="date" required></label><br>
+    <label>Event Type:
+        <select name="type">
+            <option value="concert">Concert</option>
+            <option value="seminar">Seminar</option>
+        </select>
+    </label><br>
+    <label>Message: <textarea placeholder="Enter your message"></textarea></label><br>
+    <button type="submit">Register</button>
+    <output id="confirmation"></output>
+</form>
+
+<script>
+    function confirmMsg(e) {
+        e.preventDefault();
+        document.getElementById("confirmation").textContent = "Thank you for registering!";
+    }
+</script>

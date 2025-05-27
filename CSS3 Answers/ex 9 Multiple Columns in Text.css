@@ -1,0 +1,16 @@
+HTML:
+<section class="news">
+    <h2>Community Bulletin</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta.
+        Nulla facilisi. Proin tincidunt sapien vel mi fermentum, nec commodo.
+    </p>
+</section>
+CSS:
+.news {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    padding: 20px;
+    background-color: #fdfdfd;
+}

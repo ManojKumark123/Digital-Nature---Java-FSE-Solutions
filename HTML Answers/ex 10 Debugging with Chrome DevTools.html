@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevTools Debug Example</title>
+    <style>
+        #debugBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Debugging Test Page</h1>
+
+    <div id="debugBox">Hover or Click Me!</div>
+
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+
+    <script>
+        const box = document.getElementById("debugBox");
+
+        box.addEventListener("mouseover", function () {
+            console.log("Mouse is over the box");
+        });
+
+        box.addEventListener("click", function () {
+            console.log("Box clicked!");
+            box.textContent = "Clicked!";
+        });
+
+        function toggleHighlight() {
+            console.log("Toggle button clicked");
+            box.classList.toggle("highlight");
+        }
+
+        // Intentional bug for testing:
+        function intentionalBug() {
+            let test = undefined;
+            console.log(test.length); // This will throw an error
+        }
+
+        // Uncomment to test the bug in the console:
+        // intentionalBug();
+    </script>
+
+</body>
+</html>
